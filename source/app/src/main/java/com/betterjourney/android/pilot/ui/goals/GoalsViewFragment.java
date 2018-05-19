@@ -6,13 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.betterjourney.android.pilot.R;
-import com.betterjourney.android.pilot.ui.goals.GoalsAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class GoalsViewActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
 
-    private GoalsAdapter mGoalsAdapter;
+    private GoalsViewAdapter mGoalsViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
 
-        mGoalsAdapter = new GoalsAdapter();
-        mRecyclerView.setAdapter(mGoalsAdapter);
+        mGoalsViewAdapter = new GoalsViewAdapter();
+        mRecyclerView.setAdapter(mGoalsViewAdapter);
 
     }
 }
