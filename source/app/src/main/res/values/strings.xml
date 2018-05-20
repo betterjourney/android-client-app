@@ -4,4 +4,7 @@
     <string name="title_home">Home</string>
     <string name="title_messages">Messages</string>
     <string name="title_journeys">Journeys</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_view_fragment">Home View fragment</string>
 </resources>

@@ -5,6 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.betterjourney.android.pilot.ui.detail.GoalDetailsActivity">
+    tools:context=".ui.goals.detail.GoalDetailsActivity">
 
 </android.support.constraint.ConstraintLayout>

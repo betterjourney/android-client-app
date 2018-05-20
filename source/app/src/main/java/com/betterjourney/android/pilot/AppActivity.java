@@ -1,4 +1,4 @@
-package com.betterjourney.android.pilot.ui;
+package com.betterjourney.android.pilot;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.betterjourney.android.pilot.R;
-
-public class NavigationActivity extends AppCompatActivity {
+public class AppActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -36,7 +34,7 @@ public class NavigationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation);
+        setContentView(R.layout.activity_app);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
