@@ -1,4 +1,4 @@
-package com.betterjourney.android.pilot.ui.goals;
+package com.betterjourney.android.pilot.ui.journeys;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
