@@ -1,4 +1,4 @@
-package com.betterjourney.android.pilot.ui.detail;
+package com.betterjourney.android.pilot.ui.goals.detail;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

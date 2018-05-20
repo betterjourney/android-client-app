@@ -15,11 +15,11 @@ import com.betterjourney.android.pilot.R;
  * Created by av7 on 3/17/18.
  */
 
-public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.GoalsAdapterViewHolder> {
+public class GoalsViewAdapter extends RecyclerView.Adapter<GoalsViewAdapter.GoalsAdapterViewHolder> {
 
     private String[] mGoalsData;
 
-    public GoalsAdapter() {
+    public GoalsViewAdapter() {
 
     }
 
