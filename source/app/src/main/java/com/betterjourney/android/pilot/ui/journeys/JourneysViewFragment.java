@@ -12,9 +12,8 @@ import com.betterjourney.android.pilot.R;
 
 public class JourneysViewFragment extends Fragment {
 
-    String[] mDemoData  = {"Journey 1", "Journey 2", "Journey 3", "Journey 4", "Journey 5", "Journey 6", "Journey 7", "Journey 8",
-            "Journey 9", "Journey 10", };
-
+    String[] mDemoData  = {"Housing & Resettlement", "Cultural", "Education", "Health", "Finances", "Journey 7",
+            "Journey 8", "Journey 9", "Journey 10", };
 
     public static JourneysViewFragment newInstance() {
         return new JourneysViewFragment();
@@ -41,24 +40,4 @@ public class JourneysViewFragment extends Fragment {
 
         return rootView;
     }
-
-//    private RecyclerView mRecyclerView;
-//
-//    private JourneysViewAdapter mJourneysViewAdapter;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.fragment_goals_view);
-//
-//        mRecyclerView = findViewById(R.id.recyclerview_goals);
-//
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-//        mRecyclerView.setLayoutManager(layoutManager);
-//        mRecyclerView.setHasFixedSize(true);
-//
-//        mJourneysViewAdapter = new JourneysViewAdapter();
-//        mRecyclerView.setAdapter(mJourneysViewAdapter);
-//
-//    }
 }
