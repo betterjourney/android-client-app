@@ -1,4 +1,4 @@
-package com.betterjourney.android.pilot.data.database;
+package com.betterjourney.android.pilot.data.local;
 
 /**
  * Created by av7 on 3/17/18.

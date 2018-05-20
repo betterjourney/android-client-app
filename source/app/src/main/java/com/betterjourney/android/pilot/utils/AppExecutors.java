@@ -1,4 +1,4 @@
-package com.betterjourney.android.pilot;
+package com.betterjourney.android.pilot.utils;
 
 /**
  * Created by av7 on 3/30/18.
