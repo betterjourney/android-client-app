@@ -5,6 +5,7 @@
     <string name="title_messages">Messages</string>
     <string name="title_journeys">Journeys</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="home_view_fragment">Home View fragment</string>
+    <string name="messages_view_fragment">Messages View fragment</string>
+    <string name="goals_view_fragment">Goals View fragment</string>
 </resources>
