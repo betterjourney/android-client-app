@@ -5,7 +5,12 @@
     <string name="title_messages">Messages</string>
     <string name="title_journeys">Journeys</string>
 
-    <string name="home_view_fragment">Home View fragment</string>
-    <string name="messages_view_fragment">Messages View fragment</string>
-    <string name="goals_view_fragment">Goals View fragment</string>
+    <string name="home_view_fragment">Home View</string>
+    <string name="messages_view_fragment">Messages View</string>
+    <string name="journeys_view_fragment">Journeys View</string>
+
+    <!--Content Description-->
+    <string name="home_image_content_description">Home Image</string>
+    <string name="messages_image_content_description">Messages Image</string>
+    <string name="journeys_image_content_description">Journeys Image</string>
 </resources>
