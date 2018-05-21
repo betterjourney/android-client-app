@@ -12,10 +12,8 @@ import com.betterjourney.android.pilot.R;
 
 public class MessagesViewFragment extends Fragment {
 
-    String[] mUserNamesMessageData = {"BetterJourney\u2122 bot", "Foo Bar", "Neo Tzar", "Dr Strange", "Tony Stark", "Peter " +
-            "Parker",
-            "Andy " +
-            "Dufresne", "Red Reddington", "Simply Awesome", "Shiny Tomb"};
+    String[] mUserNamesMessageData = {"BetterJourney\u2122 bot", "Foo Bar", "Neo Tzar", "Dr Strange", "Tony Stark", "Peter Parker",
+            "Andy Dufresne", "Red Reddington", "Simply Awesome", "Shiny Tomb"};
 
     String[] mMessagesContentData = {"Isn't it scary that doctors call what they do \"practice\"?",
             "Jump by vow of quick, lazy strength in Oxford.",
