@@ -49,7 +49,7 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        mTextMessage = findViewById(R.id.message);
         BottomNavigationView navigation = findViewById(R.id.navigation_bottom_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 

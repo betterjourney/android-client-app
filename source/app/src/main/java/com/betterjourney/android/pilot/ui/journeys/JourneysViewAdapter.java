@@ -15,55 +15,56 @@ import com.betterjourney.android.pilot.R;
  * Created by av7 on 3/17/18.
  */
 
-public class JourneysViewAdapter extends RecyclerView.Adapter<JourneysViewAdapter.GoalsAdapterViewHolder> {
+public class JourneysViewAdapter extends RecyclerView.Adapter<JourneysViewAdapter.JourneysAdapterViewHolder> {
 
-    private String[] mGoalsData;
+    Context context;
+    private String[] mJourneysData;
 
-    public JourneysViewAdapter() {
-
+    public JourneysViewAdapter(Context context) {
+        this.context = context;
     }
 
     @Override
-    public GoalsAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public JourneysAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        int layoutIdForListItem = R.layout.goals_list_item;
+        int layoutIdForListItem = R.layout.rv_journeys_list_item;
         LayoutInflater inflater = LayoutInflater.from(context);
         boolean shouldAttachToParentImmediately = false;
 
         View view = inflater.inflate(layoutIdForListItem, parent, shouldAttachToParentImmediately);
-        return new GoalsAdapterViewHolder(view);
+        return new JourneysAdapterViewHolder(view);
     }
 
-    class GoalsAdapterViewHolder extends RecyclerView.ViewHolder {
+    class JourneysAdapterViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView mGoalTextView;
         public final ImageView mGoalImageView;
         public final ProgressBar mGoalProgressBar;
 
-        public GoalsAdapterViewHolder(View itemView) {
+        public JourneysAdapterViewHolder(View itemView) {
             super(itemView);
-            mGoalTextView = itemView.findViewById(R.id.rv_list_item_text_view);
-            mGoalImageView = itemView.findViewById(R.id.rv_list_item_image_view);
-            mGoalProgressBar = itemView.findViewById(R.id.rv_list_item_progress_bar);
+            mGoalTextView = itemView.findViewById(R.id.tv_journey_item);
+            mGoalImageView = itemView.findViewById(R.id.iv_journey_item);
+            mGoalProgressBar = itemView.findViewById(R.id.pb_journey_item);
         }
     }
 
     @Override
-    public void onBindViewHolder(GoalsAdapterViewHolder holder, int position) {
-        String goalsForToday = mGoalsData[position];
-        holder.mGoalTextView.setText(goalsForToday);
-        holder.mGoalProgressBar.getProgress();
-        holder.mGoalImageView.getDrawable();
+    public void onBindViewHolder(JourneysAdapterViewHolder holder, int position) {
+        String journeysForToday = mJourneysData[position];
+        holder.mGoalTextView.setText(journeysForToday);
+//        holder.mGoalProgressBar.getProgress();
+//        holder.mGoalImageView.getDrawable();
     }
 
     @Override
     public int getItemCount() {
-        if (null == mGoalsData) return 0;
-        return mGoalsData.length;
+        if (null == mJourneysData) return 0;
+        return mJourneysData.length;
     }
 
-    public void setGoalsData(String[] goalsData) {
-        mGoalsData = goalsData;
+    public void setJourneysData(String[] journeysData) {
+        mJourneysData = journeysData;
         notifyDataSetChanged();
     }
 }

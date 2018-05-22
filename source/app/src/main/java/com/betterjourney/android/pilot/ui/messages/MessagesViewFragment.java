@@ -2,6 +2,8 @@ package com.betterjourney.android.pilot.ui.messages;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +12,23 @@ import com.betterjourney.android.pilot.R;
 
 public class MessagesViewFragment extends Fragment {
 
+    String[] mUserNamesMessageData = {"BetterJourney\u2122 bot", "Foo Bar", "Neo Tzar", "Dr Strange", "Tony Stark", "Peter Parker",
+            "Andy Dufresne", "Red Reddington", "Simply Awesome", "Shiny Tomb"};
+
+    String[] mMessagesContentData = {"Isn't it scary that doctors call what they do \"practice\"?",
+            "Jump by vow of quick, lazy strength in Oxford.",
+            "How razorback jumping frogs can level six piqued gymnasts.",
+            "The only true wisdom is knowing that you know nothing.",
+            "Sphinx of black quartz: judge my vow.",
+            "Pack my box with five dozen liquor jugs.",
+            "Sixty zippers were quickly picked from the woven jute bag.",
+            "Quick zephyrs blow, vexing daft Jim.",
+            "Pack my box with five dozen liquor jugs",
+            "Before anything else, preparation is the key to success."};
+
+
     public static MessagesViewFragment newInstance() {
-        MessagesViewFragment messagesViewFragment = new MessagesViewFragment();
-        return messagesViewFragment;
+        return new MessagesViewFragment();
     }
 
     @Override
@@ -22,7 +38,19 @@ public class MessagesViewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_messages_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_messages_view, container, false);
+        RecyclerView mMessageRecyclerView = rootView.findViewById(R.id.rv_messages);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getActivity(), LinearLayoutManager.VERTICAL,
+                false);
+        mMessageRecyclerView.setLayoutManager(layoutManager);
+        mMessageRecyclerView.setHasFixedSize(true);
+
+        MessagesViewAdapter mMessagesViewAdapter = new MessagesViewAdapter(this.getActivity());
+        mMessagesViewAdapter.setMessagesData(mUserNamesMessageData, mMessagesContentData);
+        mMessageRecyclerView.setAdapter(mMessagesViewAdapter);
+
+        return rootView;
     }
 
 //    // TODO: Rename parameter arguments, choose names that match
